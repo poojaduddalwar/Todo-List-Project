@@ -8,6 +8,7 @@
     <title>ToDo List</title>
     <link rel="stylesheet" href="./assets/style.css">
     <script defer src="https://kit.fontawesome.com/34c5122d1d.js" crossorigin="anonymous"></script>
+    <script defer src="./assets/todo-list.js"></script>
 
 </head>
 
@@ -17,13 +18,13 @@
     <section class="main-body">
         <div class="container">
             <h2>Todo List</h2>
-            <label for="switch" class="switch-button">Toggle
+            <label for="switch" class="switch-button" id="label-button">
+                <button class="switch-button-circle"></button>
             </label>
         </div>
         <div class="list">
             <div class="add-list">
                 <input placeholder="Add a task to the List..." type="text">
-                <!-- <button class="plus-button">+</button> -->
                 <i class="fas fa-plus"></i>
             </div>
         </div>

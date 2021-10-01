@@ -23,6 +23,7 @@ header{
 }
 
 /* main styling */
+
 body{
     display: block;
     background-color: transparent;
@@ -49,7 +50,8 @@ div.container{
 }
 
 div.container h2{
-    font-weight: 1000;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 label.switch-button{
@@ -63,13 +65,15 @@ label.switch-button{
     cursor: pointer;
 }
 
-label.switch-button::after{
+.switch-button-circle{
     position: absolute;
     background-color: #f6d327;
+    cursor: pointer;
     height: 25px;
     width: 25px;
     content: '';
     transition: 0.5s;
+    border-style: none;
     top: 5px;
     left: 5px;
     border-radius: 50%;
@@ -214,7 +218,29 @@ i.fa-check-circle:hover{
 i.fa-times{
     flex-basis: 5%;
     color: red;
+    opacity: 0%;
+}
+
+i.fa-grip-lines{
+    color: black;
+    opacity: 0%;
+}
+
+div.container2:hover i.fa-times,div.container2:hover i.fa-grip-lines{
     opacity: 40%;
+    transition: 0.5s ease;
+}
+
+div.container2:hover i.fa-times:hover,div.container2:hover i.fa-grip-lines:hover{
+    opacity: 100%;
+}
+
+
+/* dark mode */
+
+.button-click{
+    transform: translateX(35px);
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 
 /* footer styles  */
