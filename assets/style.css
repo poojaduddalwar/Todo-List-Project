@@ -23,10 +23,6 @@ header{
     /* this fixes its position at the center  */
 }
 
-.dark-img{
-    background-image: url('./night.png') !important;
-}
-
 /* main styling */
 
 body{
@@ -36,9 +32,7 @@ body{
 
 .main-body div.container{
     width: 450px;
-    /* width: 55vw; */
     min-height: 400px;
-    /* min-height: 54vh; */
     position: absolute; 
     top: -200px;
 }
@@ -64,9 +58,7 @@ div.container h2{
 label.label-button{
     background-color: white;
     width: 70px;
-    /* width: 9vw; */
     height: 35px;
-    /* height: 5vh; */
     border-radius: 11px;
     position: relative;
     top: 6px;
@@ -79,9 +71,7 @@ label.label-button{
     background-color: #f6d327;
     cursor: pointer;
     height: 25px;
-    /* height: 3vh; */
     width: 25px;    
-    /* width: 3vw; */
     content: none;
     transition: 0.5s;
     border-style: none;
@@ -90,7 +80,16 @@ label.label-button{
     border-radius: 50%;
 }
 
-.button-click{
+/* dark mode */
+
+.dark {
+    background-color: #111111;
+    height: 100vh;
+    color: white;
+    transition: 0.2s ease-in;
+}
+
+body.dark .switch-button-circle{
     transform: translateX(35px);
     /* transition-timing-function: ease, cubic-bezier(0.08, 0.55, 0.25, 1); */
     transition: 0.3s;
@@ -101,11 +100,42 @@ label.label-button{
     background-color: crimson;
 }
 
-.label-button1{
-    background-color: black;
+body.dark header{
+    background-image: url(./night.png);
 }
 
+body.dark div.add-list,body.dark input#input-area{
+    background-color: #363636;
+}
 
+body.dark label.label-button{
+    background-color: #111111;
+}
+
+body.dark ol.list-items{
+    background-color: #1E1E1E;
+}
+
+body.dark div.container1,body.dark div.container2 div.content-list{
+    background-color: #363636;
+    color: #f1f1f1;
+}
+
+body.dark footer{
+    background-color: #292929;
+}
+
+body.dark i.fa-github {
+    color: #f1f1f1;
+}
+
+body.dark i.fa-grip-lines{
+    color: #a7a0a0;
+}
+
+body.dark i.fa-grip-lines:hover{
+    color: black;
+}
 /* div.list{
     display: flex;
     align-items: center;
@@ -121,14 +151,13 @@ div.add-list{
     background-color: #fff;
     opacity: 0.93;
     height: 40px;
-    /* height: 5vh; */
     padding: 2px 10px;
     border-radius: 5px;
     width: 450px;
-    /* width: 55vw; */
     top: -130px;
 }
-div.add-list input{
+
+div.add-list input#input-area{
     flex-basis: 100%;
     border: none;
     outline: none;
@@ -156,7 +185,6 @@ ol.list-items{
     position: absolute;
     top: -40px;
     width: 450px;
-    /* width: 55vw; */
     border-radius: 10px;
     transition: 0.5s ease-out;
 }
@@ -238,7 +266,6 @@ i.fa-check-circle{
 
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9C58D", endColorstr="#F492F0", GradientType=1 );
 
-    /* color: white; */
     opacity: 50%;
 }
 
@@ -266,34 +293,19 @@ div.container2:hover i.fa-times:hover,div.container2:hover i.fa-grip-lines:hover
     opacity: 100%;
 }
 
-
-/* dark mode */
-
-.dark { 
-    background-color: black !important;  
-}
-
-.light-dark{
-    background-color: #363636 !important; 
-}
-
-/* .dark-img{
-    background: url(./night.png) !important;
-} */
-/* 
-.button-click{
-    transform: translateX(35px);
-    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
-} */
-
 /* footer styles  */
 
-img.social{
+.social{
     width: 18px;
     margin: 0px 10px;
 }
 div.footer-img-class{
     padding-top: 5px;
+}
+
+i.fa-github {
+    color: black;
+    font-size: larger;
 }
 
 footer{
