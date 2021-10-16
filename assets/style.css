@@ -235,7 +235,7 @@ div.item-sorting :hover{
 div.content-list{
     color: #808080;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     font-size: 1.2rem;
@@ -251,10 +251,18 @@ div.content-list{
     box-shadow: rgb(100 100 100/15%) 0px 40px 60px -12px, rgb(10 10 10 / 80%) 0px 18px 36px -19px;
 }
 
+div.rounded-tick{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
 div.input{
     margin-left: 30px;
     font-weight: 400;
-    flex-basis: 77%;
+    flex-basis: 78%;
+    max-width: 350px;
+    /* transform: translateY(-8px) scale(0.7); */
+    word-break: break-all;
 }
 
 div.rounded-tick input[type=checkbox]{
@@ -295,27 +303,6 @@ div.rounded-tick label:hover{
     opacity: 100%;
 }
 
-/* 
-i.fa-check-circle{
-    margin: 8px;
-    border-radius: 50%;
-    background: hsla(31, 90%, 76%, 1);
-
-    background: linear-gradient(90deg, hsla(31, 90%, 76%, 1) 0%, hsla(302, 82%, 76%, 1) 100%);
-
-    background: -moz-linear-gradient(90deg, hsla(31, 90%, 76%, 1) 0%, hsla(302, 82%, 76%, 1) 100%);
-
-    background: -webkit-linear-gradient(90deg, hsla(31, 90%, 76%, 1) 0%, hsla(302, 82%, 76%, 1) 100%);
-
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9C58D", endColorstr="#F492F0", GradientType=1 );
-
-    opacity: 50%;
-}
-
-i.fa-check-circle:hover{
-    opacity: 100%;
-} */
-
 /* i.fa-times{
     flex-basis: 5%;
     color: red;
@@ -323,7 +310,7 @@ i.fa-check-circle:hover{
     padding-right: 10px;
 } */
 
-div.content-list button{
+div.CancelGripButtons button{
     border: none;
     background-color: transparent;
     /* opacity: 0%; */
@@ -332,28 +319,35 @@ div.content-list button{
     flex-basis: 5%;
     opacity: 0%;
     padding-right: 10px;
+    top: 20px;
+}
+div.CancelGripButtons{
+    position: relative;
+    right: 10px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-i.fa-grip-lines{
+div.CancelGripButtons i.fa-grip-lines{
     color: black;
     opacity: 0%;
 }
 
-div.container2:hover button{
+div.content-list:hover button{
     opacity: 40%;
     transition: 0.5s ease;
 }
 
-div.container2:hover button:hover{
+div.content-list:hover div.CancelGripButtons:hover button.fa-times:hover{
     opacity: 100%;
 }
 
-div.container2:hover i.fa-grip-lines{
+div.content-list:hover i.fa-grip-lines{
     opacity: 40%;
     transition: 0.5s ease;
 }
 
-div.container2:hover i.fa-grip-lines:hover{
+div.content-list:hover div.CancelGripButtons:hover i.fa-grip-lines:hover{
     opacity: 100%;
 }
 
