@@ -273,7 +273,7 @@ div.rounded-tick label{
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 23%;
+    top: 25%;
     left: 15px;
     cursor: pointer;
     background-color: #f6d327;
@@ -299,6 +299,10 @@ div.rounded-tick label::after{
 -45deg);
 }
 
+.strike{
+    text-decoration: line-through !important;
+}
+
 div.rounded-tick label:hover{
     opacity: 100%;
 }
@@ -310,7 +314,7 @@ div.rounded-tick label:hover{
     padding-right: 10px;
 } */
 
-div.CancelGripButtons button{
+div.content-list button{
     border: none;
     background-color: transparent;
     /* opacity: 0%; */
@@ -321,14 +325,14 @@ div.CancelGripButtons button{
     padding-right: 10px;
     top: 20px;
 }
-div.CancelGripButtons{
+/* div.CancelGripButtons{
     position: relative;
     right: 10px;
     display: flex;
     justify-content: space-evenly;
-}
+} */
 
-div.CancelGripButtons i.fa-grip-lines{
+i.fa-grip-lines{
     color: black;
     opacity: 0%;
 }
@@ -338,7 +342,7 @@ div.content-list:hover button{
     transition: 0.5s ease;
 }
 
-div.content-list:hover div.CancelGripButtons:hover button.fa-times:hover{
+div.content-list:hover button.fa-times:hover{
     opacity: 100%;
 }
 
@@ -347,7 +351,7 @@ div.content-list:hover i.fa-grip-lines{
     transition: 0.5s ease;
 }
 
-div.content-list:hover div.CancelGripButtons:hover i.fa-grip-lines:hover{
+div.content-list:hover i.fa-grip-lines:hover{
     opacity: 100%;
 }
 
